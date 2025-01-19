@@ -1,7 +1,9 @@
+import Hero from "../../Component/Hero/Hero";
+
 function Homepageallsection() {
     return (
         <div>
-            HOme page all section
+            <Hero></Hero>
         </div>
     );
 }

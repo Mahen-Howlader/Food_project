@@ -6,7 +6,7 @@ function Navbar() {
             <div>
                 <h2 className="text-3xl">FoodHouse</h2>
             </div>
-            <div className="flex gap-x-5 items-center uppercase">
+            <div className="hidden md:flex  gap-x-5 items-center uppercase">
                 <div className="flex gap-x-5 ">
                     <h3>Home</h3>
                     <h3>Products</h3>
@@ -19,7 +19,7 @@ function Navbar() {
                 </div>
             </div>
             <div className="md:hidden">
-                <IoMdMenu />
+                <IoMdMenu size={35} />
             </div>
         </div>
     );
