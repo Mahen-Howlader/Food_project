@@ -1,4 +1,5 @@
 import { IoMdMenu } from "react-icons/io";
+import { NavLink } from "react-router";
 
 function Navbar() {
     return (
@@ -8,8 +9,8 @@ function Navbar() {
             </div>
             <div className="hidden md:flex  gap-x-5 items-center uppercase">
                 <div className="flex gap-x-5 ">
-                    <h3>Home</h3>
-                    <h3>Products</h3>
+                    <NavLink to={"/"}>Home</NavLink>
+                    <NavLink to={"/product"}>Products</NavLink>
                     <h3>About Us</h3>
                     <h3>Contacts</h3>
                 </div>
