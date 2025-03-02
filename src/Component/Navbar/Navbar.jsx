@@ -1,4 +1,5 @@
 import { IoMdMenu } from "react-icons/io";
+import { IoCartOutline } from "react-icons/io5";
 import { NavLink } from "react-router";
 
 function Navbar() {
@@ -13,6 +14,10 @@ function Navbar() {
                     <NavLink to={"/product"}>Products</NavLink>
                     <h3>About Us</h3>
                     <h3>Contacts</h3>
+                    <div className="relative">
+                    <IoCartOutline size={22} />
+                    <p className="absolute -top-4 -right-3"><span className=" p-1 rounded-full" >4</span></p>
+                    </div>
                 </div>
                 <div className="text-xl font-bold flex gap-x-3 ">
                     <h2>Login</h2>
