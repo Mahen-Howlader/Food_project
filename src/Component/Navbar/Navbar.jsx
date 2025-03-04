@@ -15,8 +15,8 @@ function Navbar() {
                     <h3>About Us</h3>
                     <h3>Contacts</h3>
                     <div className="relative">
-                    <IoCartOutline size={22} />
-                    <p className="absolute -top-4 -right-3"><span className=" p-1 rounded-full" >4</span></p>
+                        <IoCartOutline onClick={() => handelAddCart()} size={22} />
+                        <p className="absolute -top-4 -right-3"><span className=" p-1 rounded-full" >4</span></p>
                     </div>
                 </div>
                 <div className="text-xl font-bold flex gap-x-3 ">

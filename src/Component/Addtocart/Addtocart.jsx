@@ -3,7 +3,7 @@ import { RxCrossCircled } from "react-icons/rx";
 
 function Addtocart() {
     return (
-        <div className="bg-white fixed top-0 right-0 border-2 border-gray-400 rounded-lg p-3 shadow-black  w-2/6 h-full scroll-smooth overflow-auto">
+        <div className="hidden bg-white fixed top-0 right-0 border-2 border-gray-400 rounded-lg p-3 shadow-black  w-2/6 h-full scroll-smooth overflow-auto">
             <div className="flex justify-between">
                 <h2 className="capitalize">My order</h2>
                 <RxCrossCircled className="hover:text-red-500 size-8 " />
@@ -109,7 +109,6 @@ function Addtocart() {
 
                             </div>
                         </div>
-
                     </div>
                 </section>
             </div>

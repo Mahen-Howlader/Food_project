@@ -3,9 +3,14 @@ import Navbar from "../../Component/Navbar/Navbar";
 import Footer from "../../Component/Footer/Footer";
 
 function Home() {
+
+    function handelAddCart(){
+
+    }
+
     return (
         <>
-            <Navbar></Navbar>
+            <Navbar ></Navbar>
             <div className="min-h-[calc(100vh-435px)]">
                 <Outlet></Outlet>
             </div>
