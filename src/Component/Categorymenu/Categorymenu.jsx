@@ -1,4 +1,13 @@
+import useFoodData from "../../Hook/Alldata";
+
 function Categorymenu() {
+    const { isData: foodData, isLoading } = useFoodData();
+
+    if (isLoading) return <h1>Loading data.....</h1>
+
+    // ইউনিক ক্যাটাগরি বের করা
+    const Catagory = [...new Set(foodData?.map(product => product.category))]
+    console.log(Catagory)
     return (
         <div>
             <div className="flex items-center">
@@ -6,10 +15,14 @@ function Categorymenu() {
                 <h3 className='text-gray-400 px-2 mt-3 -ml-3'>Find the best food</h3>
             </div>
             <div className='flex gap-x-5 px-2 py-3 overflow-x-scroll md:overflow-x-hidden scroll-smooth'>
-                <button className='bg-gray-200 px-3 py-1 rounded-lg hover:bg-green-500 hover:text-white'>All</button>
-                <button className='bg-gray-200 px-3 py-1 rounded-lg hover:bg-green-500 hover:text-white'>Lunch</button>
-                <button className='bg-gray-200 px-3 py-1 rounded-lg hover:bg-green-500 hover:text-white'>Breakfast</button>
-                <button className='bg-gray-200 px-3 py-1 rounded-lg hover:bg-green-500 hover:text-white'>Dinner</button>
+
+                {
+                    Catagory?.map((val, index) => {
+                        return <button key={index} className='bg-gray-200 px-3 py-1 rounded-lg hover:bg-green-500 hover:text-white'>{val}</button>
+                        
+                    })
+                }
+
             </div>
         </div>
     );

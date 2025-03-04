@@ -1,25 +1,16 @@
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import useFoodData from "../../Hook/Alldata";
 
 function Foodcard() {
 
-    const { data: isData, isLoading } = useQuery({
-        queryKey: ["alldata"],
-        queryFn: async () => {
-            const { data } = await axios.get("http://localhost:5000/fooddata");
-            // console.log(data)
-            return data;
-        }
-    })
-
+    const { isData : foodData, isLoading } = useFoodData();
     if (isLoading) return <h1>Loading...</h1>
 
-    console.log(isData)
+    console.log(foodData)
 
     return (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {
-                isData?.map((val, index) => {
+                foodData?.map((val, index) => {
 
                     const {category,desc,rating,price,name,img,} = val;
 
