@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { NavLink } from "react-router";
+import { UserContext } from "../../Context/Provider";
 
 function Navbar() {
+const {handelAddCart} = useContext(UserContext)
+
+
     return (
         <div className="bg-[#F3F3F3] py-3 flex items-center justify-between px-5 md:px-11">
             <div>

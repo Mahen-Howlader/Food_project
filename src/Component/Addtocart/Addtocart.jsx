@@ -1,12 +1,17 @@
+import { useContext } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { RxCrossCircled } from "react-icons/rx";
+import { UserContext } from "../../Context/Provider";
 
 function Addtocart() {
+    const { cartOper,handelACrossCart } = useContext(UserContext);
+    console.log(cartOper)
     return (
-        <div className="hidden bg-white fixed top-0 right-0 border-2 border-gray-400 rounded-lg p-3 shadow-black  w-2/6 h-full scroll-smooth overflow-auto">
+        <div className={`bg-white fixed transition-transform duration-300 ease-in-out top-0 right-0 border-2 border-gray-400 rounded-lg p-3 shadow-black w-2/6 h-full scroll-smooth overflow-auto ${cartOper ? "translate-x-0" : "translate-x-full"}`}
+        >
             <div className="flex justify-between">
                 <h2 className="capitalize">My order</h2>
-                <RxCrossCircled className="hover:text-red-500 size-8 " />
+                <RxCrossCircled onClick={() => handelACrossCart()} className="hover:text-red-500 size-8 " />
             </div>
 
             {/* cart */}
@@ -144,7 +149,7 @@ function Addtocart() {
                 <div className="flex items-center justify-between flex-col sm:flex-row justify-center gap-3 mt-5">
                     <button className="border flex bg-blue-500 py-2 px-4 rounded-full">
                         <span className="">
-                           Coupon Code
+                            Coupon Code
                         </span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -184,6 +189,6 @@ function Addtocart() {
             </section>
         </div>
     );
-}
+};
 
 export default Addtocart;
