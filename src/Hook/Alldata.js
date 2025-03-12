@@ -10,7 +10,7 @@ function useFoodData (){
             return data;
         }
     })
-    
+    console.log(isData)
     return {isData,isLoading}
     
 }

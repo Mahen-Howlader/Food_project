@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 
 function Foodcard() {
     const [pageNumbar, setPageNumber] = useState(0);
-    const { isData: foodData ,isLoading} = useFoodData();
+    const { isData: foodData, isLoading } = useFoodData();
 
 
     // const { data: isData, isLoading, error } = useQuery({
@@ -23,12 +23,12 @@ function Foodcard() {
                 {
                     foodData?.map((val, index) => {
 
-                        const { category, desc, rating, price, name, img, } = val;
+                        const { category, desc, rating, price, name, img1, } = val;
 
                         return <div key={index} className="bg-gray-100 p-2 overflow-hidden cursor-pointer">
                             <div className="bg-white flex flex-col h-full">
                                 <div className="w-full">
-                                    <img src={img} alt="food1"
+                                    <img src={img1} alt="food1"
                                         className="aspect-[139/125] w-full object-cover" />
                                 </div>
 
@@ -36,7 +36,10 @@ function Foodcard() {
                                     <h4 className="text-sm sm:text-base font-bold text-gray-800">{name}</h4>
                                     <h4 className="text-sm sm:text-base text-gray-800 font-bold mt-2">$22 <strike className="text-gray-500 ml-1">${price}</strike></h4>
                                 </div>
-                                <Link to={`/product/${val?._id}`} className="bg-gray-700 font-semibold hover:bg-gray-800 text-white text-sm px-2 py-2 w-full">Add to Cart</Link>
+                                <Link to={`/product/${val?._id}`} className="bg-gray-700 flex  font-semibold hover:bg-gray-800 text-white text-sm px-2 py-2 w-full">View product <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="size-6 ml-2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                </svg>
+                                </Link>
                             </div>
                         </div>
                     })
