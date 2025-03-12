@@ -7,7 +7,6 @@ function Homepageallsection() {
         <div>
             <Hero></Hero>
             <Product></Product>
-            <Addtocart></Addtocart>
         </div>
     );
 }

@@ -7,7 +7,7 @@ function Addtocart() {
     const { cartOper,handelACrossCart } = useContext(UserContext);
     console.log(cartOper)
     return (
-        <div className={`bg-white fixed transition-transform duration-300 ease-in-out top-0 right-0 border-2 border-gray-400 rounded-lg p-3 shadow-black w-2/6 h-full scroll-smooth overflow-auto ${cartOper ? "translate-x-0" : "translate-x-full"}`}
+        <div className={`bg-white z-50 fixed transition-transform duration-300 ease-in-out top-0 right-0 border-2 border-gray-400 rounded-lg p-3 shadow-black w-2/6 h-full scroll-smooth overflow-auto ${cartOper ? "translate-x-0" : "translate-x-full"}`}
         >
             <div className="flex justify-between">
                 <h2 className="capitalize">My order</h2>

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import { UserContext } from "../../Context/Provider";
 
 function Navbar() {
@@ -25,8 +25,8 @@ const {handelAddCart} = useContext(UserContext)
                     </div>
                 </div>
                 <div className="text-xl font-bold flex gap-x-3 ">
-                    <h2>Login</h2>
-                    <h2>Sign up</h2>
+                    <Link to={"/login"}>Login</Link>
+                    <Link to={"/signin"}>Sign up</Link>
                 </div>
             </div>
             <div className="md:hidden">

@@ -1,10 +1,11 @@
 import { Outlet } from "react-router";
 import Navbar from "../../Component/Navbar/Navbar";
 import Footer from "../../Component/Footer/Footer";
+import Addtocart from "../../Component/Addtocart/Addtocart";
 
 function Home() {
 
-    function handelAddCart(){
+    function handelAddCart() {
 
     }
 
@@ -15,6 +16,8 @@ function Home() {
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>
+            <Addtocart></Addtocart>
+
         </>
     );
 }
