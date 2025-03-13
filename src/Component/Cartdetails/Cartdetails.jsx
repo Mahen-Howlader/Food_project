@@ -1,12 +1,13 @@
 import { useParams } from "react-router";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import MultipelproductCart from "./MultipelproductCart";
 
 function Cartdetails(props) {
     const { id } = useParams();
 
-    const { data : productData, isLoading } = useQuery({
-        
+    const { data: productData, isLoading } = useQuery({
+
         queryKey: ["FoodData", id],
         queryFn: async () => {
             const { data } = await axios.get(`http://localhost:5000/product/${id}`);
@@ -17,45 +18,33 @@ function Cartdetails(props) {
     if (isLoading) return <h1>Loading...</h1>
     console.log(productData)
 
+    // const {category,desc,img1,img2,img3,img4,img5} = productData;
 
+
+    const { img } = productData;
+    // console.log(img)
     return (
         <div>
             <div className="bg-gray-100">
                 <div className="container mx-auto px-4 py-8">
                     <div className="flex flex-wrap -mx-4">
                         {/* Product Images */}
-                        <div className="w-full md:w-1/2 px-4 mb-8">
+                        <div className="w-full  md:w-1/2 px-4 mb-8">
                             <img
-                                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
+                                src={img[0]?.url}
                                 alt="Product"
-                                className="w-full h-auto rounded-lg shadow-md mb-4"
+                                className="w-full min-h-2/6 max-h-2/6 max-h-96 rounded-lg object-fill shadow-md mb-4"
                                 id="mainImage"
                             />
                             <div className="flex gap-4 py-4 justify-center overflow-x-auto">
-                                <img
-                                    src="https://images.unsplash.com/photo-1505751171710-1f6d0ace5a85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMnx8aGVhZHBob25lfGVufDB8MHx8fDE3MjEzMDM2OTB8MA&ixlib=rb-4.0.3&q=80&w=1080"
-                                    alt="Thumbnail 1"
-                                    className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                    onclick="changeImage(this.src)"
-                                />
-                                <img
-                                    src="https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
-                                    alt="Thumbnail 2"
-                                    className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                    onclick="changeImage(this.src)"
-                                />
-                                <img
-                                    src="https://images.unsplash.com/photo-1496957961599-e35b69ef5d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw4fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
-                                    alt="Thumbnail 3"
-                                    className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                    onclick="changeImage(this.src)"
-                                />
-                                <img
-                                    src="https://images.unsplash.com/photo-1528148343865-51218c4a13e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwzfHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
-                                    alt="Thumbnail 4"
-                                    className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                    onclick="changeImage(this.src)"
-                                />
+
+                                {
+                                    img?.map((image, index) => {
+
+                                        return <MultipelproductCart key={index} index={index} image={image}></MultipelproductCart>
+
+                                    })
+                                }
                             </div>
                         </div>
                         {/* Product Details */}

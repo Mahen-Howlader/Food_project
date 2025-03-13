@@ -22,13 +22,12 @@ function Foodcard() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
                 {
                     foodData?.map((val, index) => {
-
-                        const { category, desc, rating, price, name, img1, } = val;
-
+                        const { category, desc, rating, price, name, img, } = val;
+                        // console.log(img[0].url)
                         return <div key={index} className="bg-gray-100 p-2 overflow-hidden cursor-pointer">
                             <div className="bg-white flex flex-col h-full">
                                 <div className="w-full">
-                                    <img src={img1} alt="food1"
+                                    <img src={img[0]?.url} alt="food1"
                                         className="aspect-[139/125] w-full object-cover" />
                                 </div>
 
