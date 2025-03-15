@@ -4,6 +4,13 @@ body{
     font-family: "Poppins", serif;
 }
 
+
+.slider-container .slick-slide {
+    /* margin: 0 10px; */
+    /* Adjust spacing */
+    /* margin-left: 10px; */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

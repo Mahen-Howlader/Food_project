@@ -17,8 +17,8 @@ const {handelAddCart} = useContext(UserContext)
                 <div className="flex gap-x-5 ">
                     <NavLink to={"/"}>Home</NavLink>
                     <NavLink to={"/product"}>Products</NavLink>
-                    <h3>About Us</h3>
-                    <h3>Contacts</h3>
+                    <NavLink to={"/contackfrom"}>Contacts</NavLink>
+                    <NavLink to={"/about"}>About Us</NavLink>
                     <div className="relative">
                         <IoCartOutline onClick={() => handelAddCart()} size={22} />
                         <p className="absolute -top-4 -right-3"><span className=" p-1 rounded-full" >4</span></p>

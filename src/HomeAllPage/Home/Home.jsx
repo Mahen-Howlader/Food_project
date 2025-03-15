@@ -10,15 +10,15 @@ function Home() {
     }
 
     return (
-        <>
+        <div className="max-w-screen-2xl mx-auto">
             <Navbar ></Navbar>
             <div className="min-h-[calc(100vh-435px)]">
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>
             <Addtocart></Addtocart>
-
-        </>
+            
+        </div>
     );
 }
 

@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import MultipelproductCart from "./MultipelproductCart";
+import CartImagepage from "./CartImagepage";
 
 function Cartdetails(props) {
     const { id } = useParams();
@@ -30,22 +31,8 @@ function Cartdetails(props) {
                     <div className="flex flex-wrap -mx-4">
                         {/* Product Images */}
                         <div className="w-full  md:w-1/2 px-4 mb-8">
-                            <img
-                                src={img[0]?.url}
-                                alt="Product"
-                                className="w-full min-h-2/6 max-h-2/6 max-h-96 rounded-lg object-fill shadow-md mb-4"
-                                id="mainImage"
-                            />
-                            <div className="flex gap-4 py-4 justify-center overflow-x-auto">
 
-                                {
-                                    img?.map((image, index) => {
-
-                                        return <MultipelproductCart key={index} index={index} image={image}></MultipelproductCart>
-
-                                    })
-                                }
-                            </div>
+                            <CartImagepage img={img}></CartImagepage>
                         </div>
                         {/* Product Details */}
                         <div className="w-full md:w-1/2 px-4">

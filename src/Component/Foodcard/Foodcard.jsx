@@ -1,30 +1,25 @@
 import { Link } from "react-router";
 import useFoodData from "../../Hook/Alldata";
 import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FaArrowAltCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 function Foodcard() {
-    const [pageNumbar, setPageNumber] = useState(0);
     const { isData: foodData, isLoading } = useFoodData();
-
-
-    // const { data: isData, isLoading, error } = useQuery({
-    //     queryKey: ["pageData", pageNumbar],
-    //     queryFn: async () => usePagination(pageNumbar),
-    //     refetchIntervalInBackground: true
-    // })
 
 
     if (isLoading) return <h1>Loading...</h1>
     // console.log(foodData)
     return (
-        <div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className=" mx-auto mb-4 pb-4">
+            <h2 className="text-xl sm:text-3xl font-bold text-gray-800 text-center mb-6 sm:mb-10">Food and Flavours</h2>
+            <div className="px-3 sm:px-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                 {
                     foodData?.map((val, index) => {
                         const { category, desc, rating, price, name, img, } = val;
                         // console.log(img[0].url)
-                        return <div key={index} className="bg-gray-100 p-2 overflow-hidden cursor-pointer">
+                        return <div key={index} className="bg-gray-100 p-2 overflow-hidden cursor-pointer border-2">
                             <div className="bg-white flex flex-col h-full">
                                 <div className="w-full">
                                     <img src={img[0]?.url} alt="food1"
@@ -32,7 +27,7 @@ function Foodcard() {
                                 </div>
 
                                 <div className="p-4 text-center flex-1">
-                                    <h4 className="text-sm sm:text-base font-bold text-gray-800">{name}</h4>
+                                    <h4 className="text-sm sm:text-base font-bold text-gray-800">{name ? name : "Not update Product title"}</h4>
                                     <h4 className="text-sm sm:text-base text-gray-800 font-bold mt-2">$22 <strike className="text-gray-500 ml-1">${price}</strike></h4>
                                 </div>
                                 <Link to={`/product/${val?._id}`} className="bg-gray-700 flex  font-semibold hover:bg-gray-800 text-white text-sm px-2 py-2 w-full">View product <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="size-6 ml-2">
@@ -43,9 +38,8 @@ function Foodcard() {
                         </div>
                     })
                 }
-
-
             </div>
+
             {/* pagination */}
             {/* <div className="flex justify-center my-10">
                 <div className="flex">

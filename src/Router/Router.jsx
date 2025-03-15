@@ -5,6 +5,8 @@ import App from "../App";
 import Cartdetails from "../Component/Cartdetails/Cartdetails";
 import Login from "../Authentication/Login";
 import Signin from "../Authentication/Signin";
+import From from "../Component/Contactfrom/From";
+import About from "../Component/About/About";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: "/signin",
         element: <Signin></Signin>
+      },
+      {
+        path: "/contackfrom",
+        element: <From></From>
+      },
+      {
+        path: "/about",
+        element: <About></About>
       },
     ]
   },
