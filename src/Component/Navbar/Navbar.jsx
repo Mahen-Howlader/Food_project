@@ -3,6 +3,7 @@ import { IoMdMenu } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { Link, NavLink } from "react-router";
 import { UserContext } from "../../Context/Provider";
+import { MdDashboard } from "react-icons/md";
 
 function Navbar() {
 const {handelAddCart} = useContext(UserContext)
@@ -18,7 +19,8 @@ const {handelAddCart} = useContext(UserContext)
                     <NavLink to={"/"}>Home</NavLink>
                     <NavLink to={"/product"}>Products</NavLink>
                     <NavLink to={"/contackfrom"}>Contacts</NavLink>
-                    <NavLink to={"/about"}>About Us</NavLink>
+                    {/* <NavLink to={"/about"}>About Us</NavLink> */}
+                    <NavLink to={"/dashboard"}><MdDashboard size={22} /></NavLink>
                     <div className="relative">
                         <IoCartOutline onClick={() => handelAddCart()} size={22} />
                         <p className="absolute -top-4 -right-3"><span className=" p-1 rounded-full" >4</span></p>
