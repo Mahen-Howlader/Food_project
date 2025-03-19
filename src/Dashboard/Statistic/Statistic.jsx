@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 import { FaUser } from "react-icons/fa";
 import Barchart from "../BarChat/Barchart";
 import Citychart from "../CityChart/Citychart";
 import Salechart from "../SaleChart/Salechart";
+=======
+import Barchart from "../BarChat/Barchart";
+import Citychart from "../CityChart/Citychart";
+import User from "../User/User";
+import Dashboardslider from "../DashboardSlider/Dashboardslider";
+>>>>>>> 70214d7 (profile section design)
 
 function Statistic() {
     return (
         <div>
             <div>
                 <div className=" flex flex-col flex-auto flex-shrink-0 antialiased bg-white dark:bg-gray-700 text-black dark:text-white">
+<<<<<<< HEAD
                     {/* Header */}
                     <div className="fixed w-full flex items-center justify-between h-14 text-white z-10">
                         <div className="flex items-center justify-start md:justify-center pl-3 w-14 md:w-64 h-14 bg-blue-800 dark:bg-gray-800 border-none space-x-2 items-center">
@@ -86,6 +94,10 @@ function Statistic() {
                         </div>
                     </div>
                     {/* ./Sidebar */}
+=======
+
+                    <Dashboardslider></Dashboardslider>
+>>>>>>> 70214d7 (profile section design)
                     <div className="h-full ml-14 mb-10 md:ml-64">
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-4 gap-4">
                             <div className="bg-blue-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-blue-600 dark:border-gray-600 text-white font-medium group">
@@ -127,11 +139,21 @@ function Statistic() {
                         </div>
 
                         <div>
+<<<<<<< HEAD
                             <div className="grid md:grid-cols-1 lg:grid-cols-2 border">
                                 <Barchart></Barchart>
                                 <Citychart></Citychart>
                             </div>
                             <Salechart></Salechart>
+=======
+                            <div className="grid md:grid-cols-1 items-center my-10 lg:grid-cols-2 ">
+                                <Barchart></Barchart>
+                                <Citychart></Citychart>
+                            </div>
+                            <div>
+                                <User></User>
+                            </div>
+>>>>>>> 70214d7 (profile section design)
                         </div>
                     </div>
 
