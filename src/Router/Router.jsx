@@ -7,6 +7,9 @@ import Login from "../Authentication/Login";
 import Signin from "../Authentication/Signin";
 import From from "../Component/Contactfrom/From";
 import About from "../Component/About/About";
+import Dashboard from "../Dashboard/Dashboard";
+import Statistic from "../Dashboard/Statistic/Statistic";
+import Profile from "../Dashboard/Profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +44,22 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About></About>
       },
+
     ]
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        index: true,
+        element: <Statistic></Statistic>
+      },
+      {
+        path : "profile",
+        element : <Profile></Profile>
+      }
+    ],
   },
 ]);
 

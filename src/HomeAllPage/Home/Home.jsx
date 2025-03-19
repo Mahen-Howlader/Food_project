@@ -17,7 +17,7 @@ function Home() {
             </div>
             <Footer></Footer>
             <Addtocart></Addtocart>
-            
+            <div>dfdf</div>
         </div>
     );
 }

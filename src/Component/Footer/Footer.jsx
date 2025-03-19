@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <div>
-            <footer className="w-full border mt-14">
+            <footer className="w-full  mt-10">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     {/* <!--Grid--> */}
                     <div className="grid  gap-8 py-8 lg:grid-cols-8">
