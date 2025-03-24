@@ -146,6 +146,7 @@ const data = [
 export default function Citychart() {
   return (
     <ComposedChart
+    className="shadow-[-3px_2px_68px_-25px_rgba(0,_0,_0,_0.8)] px-5 rounded-xl"
       layout="vertical"
       width={450}
       height={400}

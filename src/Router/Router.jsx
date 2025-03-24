@@ -9,10 +9,7 @@ import From from "../Component/Contactfrom/From";
 import About from "../Component/About/About";
 import Dashboard from "../Dashboard/Dashboard";
 import Statistic from "../Dashboard/Statistic/Statistic";
-<<<<<<< HEAD
-=======
 import Profile from "../Dashboard/Profile/Profile";
->>>>>>> 70214d7 (profile section design)
 
 const router = createBrowserRouter([
   {
@@ -57,13 +54,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Statistic></Statistic>
-<<<<<<< HEAD
-=======
       },
       {
         path : "profile",
         element : <Profile></Profile>
->>>>>>> 70214d7 (profile section design)
       }
     ],
   },
