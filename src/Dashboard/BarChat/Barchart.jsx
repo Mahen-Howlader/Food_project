@@ -64,6 +64,8 @@ function Barchart(props) {
     return (
         <div>
             <BarChart
+        
+            className=''
                 width={450}
                 height={300}
                 data={data}

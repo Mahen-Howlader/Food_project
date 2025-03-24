@@ -7,7 +7,6 @@ function Categorymenu() {
 
     // ইউনিক ক্যাটাগরি বের করা
     const Catagory = [...new Set(foodData?.map(product => product.category))]
-    console.log(Catagory)
     return (
         <div>
             <div className="flex items-center">

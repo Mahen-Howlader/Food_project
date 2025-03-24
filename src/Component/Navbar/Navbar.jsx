@@ -10,7 +10,7 @@ const {handelAddCart} = useContext(UserContext)
 
 
     return (
-        <div className="bg-[#F3F3F3] py-3 flex items-center justify-between px-5 md:px-11">
+        <div className=" bg-[#F3F3F3] py-3 flex items-center justify-between px-5 md:px-11">
             <div>
                 <h2 className="text-3xl">FoodHouse</h2>
             </div>
