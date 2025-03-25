@@ -1,13 +1,14 @@
 import { Link } from "react-router";
 import useFoodData from "../../Hook/Alldata";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowAltCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import { UserContext } from "../../Context/Provider";
 function Foodcard() {
     const { isData: foodData, isLoading } = useFoodData();
-
+    const {filterProduct} = useContext(UserContext);
 
     if (isLoading) return <h1>Loading...</h1>
     // console.log(foodData)
