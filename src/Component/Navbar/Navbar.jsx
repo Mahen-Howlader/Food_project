@@ -6,11 +6,9 @@ import { UserContext } from "../../Context/Provider";
 import { MdDashboard } from "react-icons/md";
 
 function Navbar() {
-const {handelAddCart} = useContext(UserContext)
-
-
+    const { handelAddCart } = useContext(UserContext);
     return (
-        <div className="bg-[#F3F3F3] py-3 flex items-center justify-between px-5 md:px-11">
+        <div className=" bg-[#F3F3F3] py-3 flex items-center justify-between px-5 md:px-11">
             <div>
                 <h2 className="text-3xl">FoodHouse</h2>
             </div>

@@ -1,23 +1,21 @@
 import { createContext, useState } from "react";
-
 export const UserContext = createContext(null)
-
-
 const Provider = ({ children }) => {
-    const [cartOper,setCartOper] = useState(false);
-    function handelAddCart(){
-        console.log("Handel cart")
+    const [cartOper, setCartOper] = useState(false);
+    const [filterProduct, setFilterProduct] = useState("All");
+    function handelAddCart() {
         setCartOper(true)
     }
-    function handelACrossCart(){
-        console.log("Handel cart")
+    function handelACrossCart() {
         setCartOper(false)
     }
 
     const authInfo = {
         handelAddCart,
         cartOper,
-        handelACrossCart
+        handelACrossCart,
+        setFilterProduct,
+        filterProduct
     }
     return <UserContext.Provider value={authInfo}>{children}</UserContext.Provider>
 }

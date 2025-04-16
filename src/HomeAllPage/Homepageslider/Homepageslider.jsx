@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import useFoodData from '../../Hook/Alldata';
 import { Link } from 'react-router-dom';
+
 function Homepageslider(props) {
     const settings = {
         dots: true,
@@ -26,14 +27,17 @@ function Homepageslider(props) {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 2
+                    initialSlide: 2,
+                   
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: false,
+                    
                 }
             }
         ]
