@@ -146,6 +146,7 @@ const data = [
 export default function Citychart() {
   return (
     <ComposedChart
+    className="overflow-x-auto"
       layout="vertical"
       width={450}
       height={400}
