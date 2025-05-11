@@ -8,8 +8,8 @@ import Signin from "../Authentication/Signin";
 import From from "../Component/Contactfrom/From";
 import About from "../Component/About/About";
 import Dashboard from "../Dashboard/Dashboard";
-import Statistic from "../Dashboard/Statistic/Statistic";
-import Profile from "../Dashboard/Profile/Profile";
+import Statistic from "../Dashboard/Statistic";
+import Products from "../Dashboard/Dashboardpage/Products";
 
 const router = createBrowserRouter([
   {
@@ -56,8 +56,8 @@ const router = createBrowserRouter([
         element: <Statistic></Statistic>
       },
       {
-        path : "profile",
-        element : <Profile></Profile>
+        path: "product",
+        element: <Products></Products>
       }
     ],
   },

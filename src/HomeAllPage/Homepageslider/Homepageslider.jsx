@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import useFoodData from '../../Hook/Alldata';
 import { Link } from 'react-router-dom';
+import Button from '../../Component/Button/Button';
 
 function Homepageslider(props) {
     const settings = {
@@ -65,10 +66,7 @@ function Homepageslider(props) {
                                         <h4 className="text-sm sm:text-base font-bold text-gray-800">{name ? name.slice(0, 10) + "..." : "Not update title"}</h4>
                                         <h4 className="text-sm sm:text-base text-gray-800 font-bold mt-2">$22 <strike className="text-gray-500 ml-1">${price}</strike></h4>
                                     </div>
-                                    <Link to={`/product/${val?._id}`} className="bg-gray-700 flex  font-semibold hover:bg-gray-800 text-white text-sm px-2 py-2 w-full">View product <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="size-6 ml-2">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                                    </svg>
-                                    </Link>
+                                     <Button title={"View Product"} path={`/product/${val?._id}`}></Button>
                                 </div>
                             </div>
                         })
