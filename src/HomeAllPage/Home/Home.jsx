@@ -6,7 +6,7 @@ import Addtocart from "../../Component/Addtocart/Addtocart";
 function Home() {
     return (
         <div className="max-w-screen-2xl mx-auto">
-            <div className="sticky z-50 shadow-2xl top-0 left-0">
+            <div className="">
                 <Navbar ></Navbar>
             </div>
             <div className="min-h-[calc(100vh-435px)]">

@@ -6,7 +6,7 @@ function Product() {
     return (
         <div className='z-0'>
             <Categorymenu></Categorymenu>
-            <div>
+            <div className=''>
                 <Foodcard></Foodcard>
             </div>
         </div>

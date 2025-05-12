@@ -32,7 +32,7 @@ function Foodcard() {
                                     <h4 className="text-sm sm:text-base font-bold text-gray-800">{name ? name : "Not update Product title"}</h4>
                                     <h4 className="text-sm sm:text-base text-gray-800 font-bold mt-2">$22 <strike className="text-gray-500 ml-1">${price}</strike></h4>
                                 </div>
-                                <Button title={"View Product"} path={`/product/${val?._id}`}></Button>
+                                <Button title={"View Product"} path={`/fooddata/${val?._id}`}></Button>
                             </div>
                         </div>
                     })

@@ -4,8 +4,8 @@ import MultipelproductCart from "./MultipelproductCart";
 function CartImagepage({ img }) {
 
     const [mainImage,setMainImage] = useState(img[0]);
-
-    return (
+    
+    return ( 
         <>
             <img
                 src={mainImage?.url}
